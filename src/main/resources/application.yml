@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: quartz
+  datasource:
+    url: jdbc:mysql://39.97.234.52:3306/quartz?characterEncoding=utf8&allowMultiQueries=true&useSSL=false&autoReconnect=true&serverTimezone=UTC
+    username: root
+    password: root
