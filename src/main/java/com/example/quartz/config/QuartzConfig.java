@@ -35,6 +35,7 @@ public class QuartzConfig {
         factory.setJobFactory(jobFactory);
         // 默认的自动执行调度,这里设置为不自动执行调度，
         // 为了方便扩展集群分布式调度任务，这个服务只配置调度，另外启动一个或多个服务执行调度
+        // 若调度不随这项目的启动而启动，则需要将自动启动设为false
         factory.setAutoStartup(false);
         return factory;
     }
