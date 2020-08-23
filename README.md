@@ -246,7 +246,7 @@ org.quartz.jobStore.clusterCheckinInterval=20000
 #数据库引擎
 org.quartz.dataSource.myDS.driver=com.mysql.cj.jdbc.Driver
 #数据库连接
-org.quartz.dataSource.myDS.URL=jdbc:mysql://39.97.234.52:3306/quartz?characterEncoding=utf8&allowMultiQueries=true&useSSL=false&autoReconnect=true&serverTimezone=UTC
+org.quartz.dataSource.myDS.URL=jdbc:mysql://localhost:3306/quartz?characterEncoding=utf8&allowMultiQueries=true&useSSL=false&autoReconnect=true&serverTimezone=UTC
 #数据库用户
 org.quartz.dataSource.myDS.user=root
 #数据库密码
@@ -641,7 +641,7 @@ spring:
   application:
     name: quartz
   datasource:
-    url: jdbc:mysql://39.97.234.52:3306/quartz?characterEncoding=utf8&allowMultiQueries=true&useSSL=false&autoReconnect=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/quartz?characterEncoding=utf8&allowMultiQueries=true&useSSL=false&autoReconnect=true&serverTimezone=UTC
     username: root
     password: root
 ```
