@@ -1,6 +1,6 @@
 # springboot + quartz + mysql 实现持久化分布式调度
-官方文档：[http://www.quartz-scheduler.org/documentation/quartz-2.3.0/](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/)
-中文文档：[https://www.w3cschool.cn/quartz_doc/quartz_doc-2put2clm.html](https://www.w3cschool.cn/quartz_doc/quartz_doc-2put2clm.html)
+1. 官方文档：[http://www.quartz-scheduler.org/documentation/quartz-2.3.0/](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/)
+2. 中文文档：[https://www.w3cschool.cn/quartz_doc/quartz_doc-2put2clm.html](https://www.w3cschool.cn/quartz_doc/quartz_doc-2put2clm.html)
 ## 1. 获取 sql 脚本文件，创建数据库
 在官网下载好包后，在 `quartz-2.3.0-SNAPSHOT\src\org\quartz\impl\jdbcjobstore` 目录下可以选择适合自己的数据库脚本文件   
 我使用的数据库是mysql,因此我也将sql脚本放到了本项目的 `resources` 目录下
@@ -647,7 +647,7 @@ spring:
 ```
 
 ## 总结
-1. 若需要随着上面项目的启动，就执行调度任务，需要将 `factory.setAutoStartup(false);` 改为 `factory.setAutoStartup(true);`，或者直接删除 `factory.setAutoStartup(false);`
+1. 若需要随着上面项目的启动，就执行调度任务，需要将步骤5中 `factory.setAutoStartup(false);` 改为 `factory.setAutoStartup(true);`，或者直接删除 `factory.setAutoStartup(false);`
 2. 为了保证调度的高可用，重新创建一个或多个新项目用来执行调度，新项目中只需要配置上面的 `2~5` 步骤即可
 ，第五步将 `factory.setAutoStartup(false);` 改为 `factory.setAutoStartup(true);`，或者直接删除 `factory.setAutoStartup(false);`
 
